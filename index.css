@@ -95,7 +95,7 @@ header,
 
 .header a {
     color: #312a2a00;
-    -webkit-text-stroke: calc(.3vw + 2px) #cb33f9;
+    -webkit-text-stroke: calc(.05vw + 1px) #cb33f9;
     /* 描邊顏色和寬度 */
     mix-blend-mode: lighten
 }
