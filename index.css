@@ -96,8 +96,13 @@ header,
 .header a {
     color: #312a2a00;
     -webkit-text-stroke: calc(.05vw + 1px) #cb33f9;
+    transition: all .2s ease-in-out 0s;
     /* 描邊顏色和寬度 */
     mix-blend-mode: lighten
+}
+
+.header a:hover {
+    color: #e590ff;
 }
 
 
