@@ -78,7 +78,8 @@ a {
     color: #cb33f9;
 }
 
-header {
+header,
+.header {
     width: 100%;
     text-align: center;
     font-size: calc(6vw + 10px);
@@ -88,8 +89,21 @@ header {
     mask-image: radial-gradient(black, transparent 70%, transparent 100%);
 }
 
+.header {
+    z-index: 30;
+}
+
+.header a {
+    color: #312a2a00;
+    -webkit-text-stroke: 1px #cb33f9;
+    /* 描邊顏色和寬度 */
+    mix-blend-mode: lighten
+}
+
+
 .character {
     position: absolute;
+    pointer-events: none;
     bottom: var(--floor);
     height: 0;
     /* background: #666; */
