@@ -71,6 +71,10 @@ html {
     align-items: center;
     justify-content: center;
     background: linear-gradient(360deg, #000000, #120947, #3c0947);
+}
+
+a {
+    text-decoration: none;
     color: #cb33f9;
 }
 
