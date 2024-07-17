@@ -22,7 +22,7 @@
         </a>
     </header>
     <div class="character">
-        <img src="https://wolf-test-box.s3.ap-northeast-1.amazonaws.com/HarlerArt/1120706%E8%A7%92%E8%89%B2%E8%A8%AD%E8%A8%88_2.png" alt="Character">
+        <img src="https://wolf-test-box.s3.ap-northeast-1.amazonaws.com/HarlerArt/floating.gif" alt="Character">
     </div>
     <div class="ripples">
         <div class="ripple"></div>
