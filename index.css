@@ -126,6 +126,7 @@ header,
     height: 80vh;
     position: absolute;
     bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
 }
 
 .ripples {
