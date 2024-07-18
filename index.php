@@ -49,16 +49,20 @@ function CreateParticle()
 <script>
     const container = document.getElementById('container');
     const n = 1; // 每秒生成的div數量
+    let DotTimeOut;
 
     function MoveDot() {
+        clearTimeout(DotTimeOut);
         let ParticleNum = <?php echo $ParticleNum; ?>;
         for (let i = 0; i < ParticleNum; i++) {
             let top = Math.random();
             let leftPot;
             let left = Math.random();
             let halfParticle = ParticleNum / 2
-            setTimeout(() => {
-                let DotDiv = document.getElementById('Particle_' + i)
+            let DivRun = document.getElementById('Particle_' + i)
+            DivRun.className = '';
+            DotTimeOut = setTimeout(() => {
+                let DotDiv = DivRun
 
 
                 if (i > halfParticle) {
@@ -112,7 +116,7 @@ function CreateParticle()
 
 
 
-                // DotDiv.style.filter = `brightness(${(.8-Math.abs(leftPot/halfParticle - .5)) * 150}%)`;
+                DotDiv.style.filter = `brightness(${(.8-Math.abs(leftPot/halfParticle - .5)) * 150}%)`;
                 DotDiv.classList.add('child');
                 // DotDiv.style.filter = `brightness(${(.8-Math.abs(left-.5)) * 150 }%)`;
                 // DotDiv.style.left = `${left * (container.clientWidth)}px`;
