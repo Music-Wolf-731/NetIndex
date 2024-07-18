@@ -75,7 +75,7 @@ function CreateParticle()
 
                 DotDiv.classList.remove('S', 'M', 'L', 'XL');
                 if (i % 2 == 1) {
-                    DotDiv.style.top = `${container.clientHeight - (container.clientHeight/4 * (1 / A)  )}px`;
+                    DotDiv.style.top = `calc(${container.clientHeight - (container.clientHeight/4 * (1 / A)  )}px - 8vh)`;
                     if (leftPot <= halfParticle / 4 || leftPot >= halfParticle / 4 * 3) {
                         DotDiv.classList.add('L');
                     } else if (leftPot > halfParticle / 4 && leftPot < halfParticle / 4 * 3) {
@@ -83,7 +83,7 @@ function CreateParticle()
                     }
                 } else {
                     // DotDiv.classList.add('S');
-                    DotDiv.style.top = `${container.clientHeight/2 + (container.clientHeight/4 * (1 / A)  )}px`;
+                    DotDiv.style.top = `calc(${container.clientHeight/2 + (container.clientHeight/4 * (1 / A)  )}px - 8vh)`;
                     if (leftPot <= halfParticle / 4 || leftPot >= halfParticle / 4 * 3) {
                         DotDiv.classList.add('M');
                     } else if (leftPot > halfParticle / 4 && leftPot < halfParticle / 4 * 3) {
@@ -157,7 +157,7 @@ function CreateParticle()
     //     }
     // }
     MoveDot()
-    // setInterval(MoveDot, 5000);
+    window.addEventListener('resize', MoveDot);
     // function createDiv() {
     //     for (let i = 0; i < n; i++) {
     //         const div = document.createElement('div');
