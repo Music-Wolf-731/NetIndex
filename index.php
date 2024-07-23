@@ -1,11 +1,27 @@
 <?php
 $ParticleNum = 60;
+session_start();
 function CreateParticle()
 {
     $Num = $GLOBALS['ParticleNum'];
     for ($i = 0; $i < $Num; $i++) {
         echo '<div id="Particle_' . $i . '"></div>';
     }
+}
+
+switch ($_GET['Visit']) {
+    case 'work':
+        echo '嗚呼';
+        $_SESSION['Visitor'] = 'company';
+        break;
+
+    case 'value':
+        # code...
+        break;
+
+    default:
+        # code...
+        break;
 }
 
 ?>
